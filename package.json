@@ -1,22 +1,28 @@
 {
-  "name": "Webpack",
+  "name": "webpack",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/GuYan-No1/Webpack.git",
-  "author": "wc437380 <wb-wc437380@alibaba-inc.com>",
+  "author": "wc__zm@163.com",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
+    "autoprefixer": "^9.4.5",
     "css-loader": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "uglifyjs-webpack-plugin": "^2.1.1"
   }
 }
