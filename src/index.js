@@ -1,4 +1,4 @@
-let str = require('./a');
+let str = require('./a.js');
 console.log(str);
 
 require('./index.css');

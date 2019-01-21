@@ -17,7 +17,7 @@ module.exports={
     },
     plugins:[//放在所有的webpack插件
         new HtmlWebpackPlugin({
-            templete:'./src/index.html',//传入模板的路径
+            template:'./src/index.html',//传入模板的路径
             filename:'index.html',//打包后的文件名
             minify:{//压缩配置
                 removeAttributeQuotes:true,//删除属性的双引号

@@ -15,6 +15,6 @@
 ## HTML插件 
 - yarn add html-webpack-plugin -D
 
-## loader
+## loader（将源代码进行转化）
 - yarn add css-loader -D
 - yarn add style-loader -D

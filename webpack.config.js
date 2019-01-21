@@ -10,7 +10,7 @@ module.exports = {
     },
     plugins: [ //放在所有的webpack插件
         new HtmlWebpackPlugin({
-            templete: './src/index.html', //传入模板的路径
+            template: './src/index.html', //传入模板的路径
             filename: 'index.html', //打包后的文件名
             minify: { //压缩配置
                 removeAttributeQuotes: true, //删除属性的双引号
@@ -24,16 +24,17 @@ module.exports = {
             //规则 css-loader 负责解析@import 这种语法的
             // style-loader 他是把css 插入到head的标签中
             // loader的特点 希望单一,一个loader只处理一键事情
-            // loader的用法 例如：字符串只用一个loader
+            // loader的用法 例如：字符串表示只用一个loader,多个loader需要用[]
             // loader的顺序，默认是从右向左执行,从下到上执行
             //loader还可以写成对象方式
             {
                 //可以处理less文件
                 test: /\.css$/,
-                use: [{
-                    loader: 'style-loader',
-                    options:{
-                        insertAt:'top'//插入到顶部
+                use: [
+                    {
+                        loader: 'style-loader',
+                        options:{
+                            insertAt:'top'//插入到顶部
                     }
                 }, 
                 'css-loader', //@import 解析路径
