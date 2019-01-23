@@ -3,9 +3,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     optimization: {//优化项
         minimizer: [
+            new UglifyjsWebpackPlugin({
+                cache: true,//是否使用缓存
+                parallel: true,//是否并发打包
+                sourceMap:true//源码映射
+            }),
             new OptimizeCssAssetsWebpackPlugin()
         ]
     },

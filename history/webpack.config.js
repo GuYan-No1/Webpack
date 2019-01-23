@@ -15,7 +15,7 @@ module.exports={
         filename:'bundle.[hash:8].js',//打包后的文件名
         path:path.resolve(__dirname,'bulid'),//路径必须是一个绝对路径
     },
-    plugins:[//放在所有的webpack插件
+    plugins:[//放在所a有的webpack插件
         new HtmlWebpackPlugin({
             template:'./src/index.html',//传入模板的路径
             filename:'index.html',//打包后的文件名

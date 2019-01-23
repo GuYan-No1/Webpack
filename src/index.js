@@ -1,5 +1,5 @@
-let str = require('./a.js');
-console.log(str);
+// let str = require('./a.js');
+// console.log(str);
 
 require('./index.css');
 require('./a.less');
