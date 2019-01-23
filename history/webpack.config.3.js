@@ -21,7 +21,6 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'bulid'),
-        // publicPath:'https://aliyun.com'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -30,7 +29,7 @@ module.exports = {
             hash: true
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/main.css'
+            filename: 'main.css'
         }),
         new Webpack.ProvidePlugin({//提供插件,在每个模块中都注入$
             $:'jquery'
@@ -41,25 +40,23 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test:/\.html$/,
-                use:'html-withimg-loader'
-            },
-            {
-                test:/\.(png|jpg|gif)$/,
-                use:[
-                    {
-                        loader:'url-loader',
-                        //做一个限制当我们的图片小于多少k的时候我们使用base64转化，否则用file-loader产生真实的图片
-                        options:{
-                            // limit:200*1024 //200k
-                            limit:1,
-                            outputPath:'/image/',
-                            publicPath:'https://www.aliyun.com'
-                        }
-                    }
-                ]
-            },
+            // {
+            //     test:/\.js$/,
+            //     use:[
+            //         {
+            //             loader:'eslint-loader',
+            //             options:{
+            //                  enforce:'pre'//previous:强制这个loader最先执行 还有一个参数数post:强制是最后执行 normal:普通的loader默认执行顺序
+            //             }
+
+            //         }
+            //     ],
+            //     include:path.resolve(__dirname,'src')
+            // },
+            // {
+            //     test:require.resolve('jquery'),
+            //     use:'expose-loader?$'
+            // },
             {
                 test:/\.js$/,
                 use:[
