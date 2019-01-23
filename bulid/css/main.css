@@ -1,0 +1,12 @@
+body{
+    color: yellow;
+}
+body{
+    background: red;
+    /* transform: rotate(45deg); */
+}
+div{
+    width: 280px;
+    height: 140px;
+    background: url(https://www.aliyun.com/be87f046713eb9fd7cfda880a9d4a27d.jpg)
+}
