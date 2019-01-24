@@ -12,7 +12,7 @@
 ## webpack-dev-server（webpack开发服务）
 - yarn add webpack-dev-server -D
 
-## HTML插件 
+## HTML插件 (压缩html)
 - yarn add html-webpack-plugin -D
 
 ## loader
