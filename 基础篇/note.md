@@ -22,7 +22,7 @@
 
 - 类型
   - pre:前面执行的loader ;normal:普通的loader ;expore-loader:内联loader; 后置loader:postloader
-
+z
 ## 抽离样式以link的形式插入到html结构
 - yarn add mini-css-extract-plugin -D (抽离css的插件)
 
