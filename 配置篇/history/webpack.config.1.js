@@ -25,6 +25,16 @@ module.exports = {
       chunks:['home']
     })
   ],
+  resolve: {
+    modules: [path.resolve('node_modules')],
+    extensions:['.js','.css','.json','.vue']//扩展名的解析顺序，我们默认的引入的时候有时候不写拓展名，但是解析的时候会默认只解析js，配置后会如果第一个没有回依次解析
+    // mainFields: ['style', 'main'], //引入包的解析入口顺序（在引入包的package.json中查看），默认是main
+    // maiFile:[]//入口文件的名字
+    // alias: {//别名
+    //   bootstrap:'bootstrap/dist/css/bootstrap.css'
+    // }
+    
+  },
   module:{
     rules:[
       {
@@ -37,6 +47,14 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
+        ]
+        
       }
     ]
   }

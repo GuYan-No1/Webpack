@@ -44,3 +44,8 @@ devtool:'eval-source-map'
 devtool:'cheap-module-source-map'
 ```
 - 4.配置devtool:'cheap-module-eval-source-map',不会产生一个单独的文件存起来，但是会集成在打包的文件中,会提示行和列
+
+## resolve属性
+- 配置引用第三方包的解析路径
+
+## 定义环境变量
