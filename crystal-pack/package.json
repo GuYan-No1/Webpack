@@ -1,0 +1,15 @@
+{
+  "name": "crystal-pack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "crystal": "./bin/crystal-pack.js"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.3.0",
+    "@babel/traverse": "^7.2.3",
+    "@babel/types": "^7.3.0",
+    "babylon": "^6.18.0"
+  }
+}
